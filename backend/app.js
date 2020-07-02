@@ -39,10 +39,9 @@ app.use('/api/stuff', (req, res, next) => {
     ];
     res.status(200).json(stuff);
   });
-  mongoose.connect('mongodb+srv://user:Baillieu78@cluster0-ekrvy.mongodb.net/test' ,
+  mongoose.connect('mongodb+srv://user:<password>@cluster0-ekrvy.mongodb.net/test' ,
   { useNewUrlParser: true,
     useUnifiedTopology: true })
   .then(() => console.log('Connexion à MongoDB réussie !'))
   .catch(() => console.log('Connexion à MongoDB échouée !'));
-
 module.exports = app;
